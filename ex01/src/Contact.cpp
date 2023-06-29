@@ -6,7 +6,7 @@
 /*   By: eralonso <eralonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 15:12:55 by eralonso          #+#    #+#             */
-/*   Updated: 2023/06/28 15:20:41 by eralonso         ###   ########.fr       */
+/*   Updated: 2023/06/29 13:16:58 by eralonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,24 @@ Contact::Contact(std::string first_name, std::string last_name, \
 
 Contact::~Contact(void)
 {
+}
+
+std::string	Contact::getfirst_name(void)
+{
+	return (_first_name);
+}
+
+std::string	Contact::getlast_name(void)
+{
+	return (_last_name);
+}
+
+std::string	Contact::getnickname(void)
+{
+	return (_nickname);
+}
+
+std::string	Contact::getdarkest_secret(void)
+{
+	return (_darkest_secret);
 }

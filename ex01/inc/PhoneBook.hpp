@@ -6,7 +6,7 @@
 /*   By: eralonso <eralonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 12:50:03 by eralonso          #+#    #+#             */
-/*   Updated: 2023/06/28 15:24:37 by eralonso         ###   ########.fr       */
+/*   Updated: 2023/06/29 13:08:05 by eralonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,9 @@ class PhoneBook
 		PhoneBook(void);
 		PhoneBook(Contact contact);
 		~PhoneBook(void);
+		void	addContact(Contact contact);
+		Contact	findContact(int n);
+		int		getsize(void);
 };
 
 #endif

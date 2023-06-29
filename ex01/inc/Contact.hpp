@@ -6,7 +6,7 @@
 /*   By: eralonso <eralonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 12:55:47 by eralonso          #+#    #+#             */
-/*   Updated: 2023/06/28 15:20:38 by eralonso         ###   ########.fr       */
+/*   Updated: 2023/06/29 13:16:18 by eralonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,11 @@ class	Contact
 				std::string nickname, std::string darkest_secret, \
 				int	phone_number);
 		~Contact(void);
+		std::string	getfirst_name(void);
+		std::string	getlast_name(void);
+		std::string	getnickname(void);
+		std::string	getdarkest_secret(void);
+		int			getphone_number(void);
 };
 
 #endif
