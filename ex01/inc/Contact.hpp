@@ -6,7 +6,7 @@
 /*   By: eralonso <eralonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 12:55:47 by eralonso          #+#    #+#             */
-/*   Updated: 2023/06/29 13:16:18 by eralonso         ###   ########.fr       */
+/*   Updated: 2023/06/29 19:00:42 by eralonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,19 +22,29 @@ class	Contact
 		std::string	_last_name;
 		std::string	_nickname;
 		std::string	_darkest_secret;
-		int			_phone_number;
+		std::string	_phone_number;
 
 	public:
+		// Default constructor
 		Contact(void);
+		// Expanded constructor
 		Contact(std::string first_name, std::string last_name, \
 				std::string nickname, std::string darkest_secret, \
 				int	phone_number);
+		// Destructor
 		~Contact(void);
+		// Getters
 		std::string	getfirst_name(void);
 		std::string	getlast_name(void);
 		std::string	getnickname(void);
 		std::string	getdarkest_secret(void);
-		int			getphone_number(void);
+		std::string	getphone_number(void);
+		// Setters
+		void		setfirst_name(std::string first_name);
+		void		setlast_name(std::string last_name);
+		void		setnickname(std::string nickname);
+		void		setdarkest_secret(std::string darkest_secret);
+		void		setphone_number(std::string phone_number);
 };
 
 #endif
