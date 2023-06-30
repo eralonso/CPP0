@@ -6,7 +6,7 @@
 /*   By: eralonso <eralonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 15:22:25 by eralonso          #+#    #+#             */
-/*   Updated: 2023/06/29 18:17:54 by eralonso         ###   ########.fr       */
+/*   Updated: 2023/06/30 17:32:25 by eralonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 PhoneBook::PhoneBook(void)
 {
 	_size = 0;
+	_idx = 0;
 }
 
 PhoneBook::PhoneBook(Contact contact)
@@ -29,8 +30,10 @@ PhoneBook::~PhoneBook(void)
 
 void	PhoneBook::addContact(Contact contact)
 {
-	_contact[_size] = contact;
-	_size = (_size + 1) % 8;
+	_contact[_idx] = contact;
+	_idx = (_idx + 1) % 8;
+	if (_size < 8)
+		_size++;
 }
 
 Contact	PhoneBook::findContact(int n)

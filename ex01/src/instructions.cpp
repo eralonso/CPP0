@@ -6,7 +6,7 @@
 /*   By: eralonso <eralonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/30 14:47:26 by eralonso          #+#    #+#             */
-/*   Updated: 2023/06/30 15:20:25 by eralonso         ###   ########.fr       */
+/*   Updated: 2023/06/30 17:31:50 by eralonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,11 +73,11 @@ void	print_contacts(PhoneBook phonebook)
 {
 	std::string	str;
 
-	std::cout << "|    index|first name| last name|  nickname|" << std::endl;
+	std::cout << "|     index|first name| last name|  nickname|" << std::endl;
 	for (int i = 0; i < phonebook.getsize(); i++)
 	{
 		std::cout << "|";
-		std::cout << std::setw(9) << i;
+		std::cout << std::setw(10) << i;
 		std::cout << "|";
 		print_str_wide(phonebook.findContact(i).getfirst_name());
 		std::cout << "|";
@@ -96,18 +96,20 @@ void	search_contact(PhoneBook phonebook)
 
 	if (phonebook.getsize() == 0)
 	{
-		std::cout << "Phonebook is empty" << std::endl;
+		std::cout << "   Phonebook is empty" << std::endl;
 		return ;
 	}
 	print_contacts(phonebook);
-	std::getline(std::cin, str);
+	std::cout << "Select index: ";
+	if (!std::getline(std::cin, str))
+		exit(0);
 	ok = valid_strnum(str);
 	idx = 0;
 	if (ok == true)
 		idx = std::stoi(str);
 	if (ok == false || idx < 0 || idx > phonebook.getsize() - 1)
 	{
-		std::cout << "Invalid index" << std::endl;
+		std::cout << "   Invalid index" << std::endl;
 		return ;
 	}
 	std::cout << "First name: " << phonebook.findContact(idx).getfirst_name() << std::endl;
