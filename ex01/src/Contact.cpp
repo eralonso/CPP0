@@ -6,13 +6,13 @@
 /*   By: eralonso <eralonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 15:12:55 by eralonso          #+#    #+#             */
-/*   Updated: 2023/06/29 18:58:18 by eralonso         ###   ########.fr       */
+/*   Updated: 2023/06/30 18:58:18 by eralonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"Contact.hpp"
 
-Contact::Contact()
+Contact::Contact(void)
 {
 }
 

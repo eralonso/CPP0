@@ -6,12 +6,12 @@
 /*   By: eralonso <eralonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 12:55:47 by eralonso          #+#    #+#             */
-/*   Updated: 2023/06/29 19:00:42 by eralonso         ###   ########.fr       */
+/*   Updated: 2023/06/30 18:53:56 by eralonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-# define CONTACT_HPP
+#ifndef __CONTACT_H__
+# define __CONTACT_H__
 
 # include	<iostream>
 

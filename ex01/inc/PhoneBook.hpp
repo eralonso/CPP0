@@ -6,12 +6,12 @@
 /*   By: eralonso <eralonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 12:50:03 by eralonso          #+#    #+#             */
-/*   Updated: 2023/06/30 17:31:12 by eralonso         ###   ########.fr       */
+/*   Updated: 2023/06/30 18:54:43 by eralonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#ifndef __PHONEBOOK_H__
+# define __PHONEBOOK_H__
 
 #include	"Contact.hpp"
 

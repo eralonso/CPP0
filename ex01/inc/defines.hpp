@@ -6,12 +6,12 @@
 /*   By: eralonso <eralonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 18:26:03 by eralonso          #+#    #+#             */
-/*   Updated: 2023/06/29 18:26:57 by eralonso         ###   ########.fr       */
+/*   Updated: 2023/06/30 18:54:24 by eralonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DEFINES_HPP
-# define DEFINES_HPP
+#ifndef __DEFINES_H__
+# define __DEFINES_H__
 
 # define STR	(int)0
 # define INT	(int)1

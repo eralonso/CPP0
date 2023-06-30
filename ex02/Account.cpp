@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   instructions.hpp                                   :+:      :+:    :+:   */
+/*   Account.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eralonso <eralonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/30 14:49:24 by eralonso          #+#    #+#             */
-/*   Updated: 2023/06/30 18:54:35 by eralonso         ###   ########.fr       */
+/*   Created: 2023/06/30 18:55:39 by eralonso          #+#    #+#             */
+/*   Updated: 2023/06/30 19:00:26 by eralonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __INSTRUCTIONS_H__
-# define __INSTRUCTIONS_H__
+#include	"Account.hpp"
 
-# include "PhoneBook.hpp"
+Account::Account( int initial_deposit )
+{
+	
+}
 
-Contact	create_contact(void);
-void	search_contact(PhoneBook phonebook);
-
-#endif
+Account::~Account( void )
+{
+	
+}
