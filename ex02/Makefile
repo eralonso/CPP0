@@ -6,7 +6,7 @@
 #    By: eralonso <eralonso@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/22 10:08:41 by eralonso          #+#    #+#              #
-#    Updated: 2023/07/01 11:29:38 by eralonso         ###   ########.fr        #
+#    Updated: 2023/07/01 11:51:56 by eralonso         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -109,6 +109,7 @@ create_dir = $(shell $(MKD) $(1))
 all : $(NAME)
 
 $(DEP_ROOT)%.d : %.$(SUFFIX) | $(call create_dir,$(DEP_ROOT))
+	$(call msg_creating,Dependence,$*,$(BLUE))
 	$(CC) $(CFLAGS) -MMD -MF $@ $(INCLUDE) -c $< && rm -rf $(addsuffix .o,$*)
 	sed -i.tmp '1 s|:| $@ :|' $@ && rm -rf $(addsuffix .tmp,$@)
 	sed -i.tmp '1 s|^$*|$(OBJ_ROOT)$*|' $@ && rm -rf $(addsuffix .tmp,$@)
@@ -119,7 +120,7 @@ $(OBJ_ROOT)%.o : %.$(SUFFIX) %.d $(LIB_A) | $(call create_dir,$(OBJ_ROOT))
 
 $(NAME) : $(DEPS) $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $@
-	echo "\n$(GREEN)Minishell has been compiled\nNOS LO COMEMOS$(DEF_COLOR)"
+	echo "\n$(GREEN)$(NAME) has been compiled\n$(DEF_COLOR)"
 
 clean :
 	$(RM) $(OBJ_ROOT) $(DEP_ROOT)
@@ -137,7 +138,7 @@ re :
 	$(MAKE) $(MKFLAGS) fclean
 	$(MAKE) $(MKFLAGS) all
 	echo ""
-	echo "$(CIAN)Minishell has been recompiled$(DEF_COLOR)"
+	echo "$(CIAN)$(NAME) has been recompiled$(DEF_COLOR)"
 
 .PHONY : all clean fclean re
 
