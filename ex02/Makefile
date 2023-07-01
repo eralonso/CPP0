@@ -6,7 +6,7 @@
 #    By: eralonso <eralonso@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/22 10:08:41 by eralonso          #+#    #+#              #
-#    Updated: 2023/06/30 18:33:34 by eralonso         ###   ########.fr        #
+#    Updated: 2023/07/01 11:29:38 by eralonso         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ PINK		:=	\033[1;95m
 CIAN		:=	\033[1;96m
 
 #<--------------------------------->NAME<------------------------------------>#
-NAME		:=	work
+NAME		:=	Account
 
 #<--------------------------------->VARS<------------------------------------>#
 NULL		:=	
@@ -55,11 +55,11 @@ SRC_DIRS	:=	$(addprefix $(SRC_ROOT),$(SRC_DIRS))
 SRC_DIRS	:=	$(subst $(SPACE),:,$(SRC_DIRS))
 
 #<--------------------------------->FILES<---------------------------------->#
-FILES		:=	
+FILES		:=	Account tests
 
 #<---------------------------------->LANG<---------------------------------->#
 LANG		:=	CPP
-CFLAGS		:=	-Wall -Wextra -Werror #-fsanitize=address
+CFLAGS		:=	-Wall -Wextra -Werror
 
 ifeq ($(LANG),C)
 	CC := clang
